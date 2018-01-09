@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>SVG Buildout</title>
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
-	<script src="cmn.drawout.js"></script>
+	<script src="/svgDrawout.js"></script>
 	
-
 	<style>
 		svg { opacity: 0; }
 		.st0{fill:#FFFFFF;stroke:#309AD6;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -22,6 +22,7 @@
 		.st8{fill:none;stroke:#309AD6;stroke-linejoin:round;stroke-miterlimit:10;}
 		.st9{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#309AD6;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
 	</style>
+
 </head>
 <body>
 
@@ -721,39 +722,24 @@
 			C650.0145264,448.5492859,649.7622681,449.4111023,650.2514038,450.2767639z"/>
 			<polyline class="st6" points="669.053772,463.0957642 669.053772,482.6023254 665.507019,482.4490356 665.507019,463.3588562 		
 			"/>
+			</g>
 		</g>
-	</g>
-	<g id="Ground">
-		<polyline class="st5" points="-0.4253595,482.9302063 1329.5185547,482.9302063 1401,482.9302063 "/>
-	</g>
-</svg>
+		<g id="Ground">
+			<polyline class="st5" points="-0.4253595,482.9302063 1329.5185547,482.9302063 1401,482.9302063 "/>
+		</g>
+	</svg>
 
-
-<script>
-
-	$(document).ready(function() {
-
-		// svgController.initSVG( id, speed, delay, offset, toComplete, effect );
-
-      	// id - Parent ID of containing svg elements
-      	// speed - SVG Element build speed, (per element ) : 0 = No Effect 
-      	// delay - Time before SVG Grouping starts to build
-      	// offset - Overlap between the svg elements ex `-.8` or `.3`
-      	// toComplete - Overwrites speed, if needs to be built in a specifit time frame
-      	// effect - Draw or fadeIn
-
-		// To overwrite & controll specific speeds for indiviudal svg element, add ` data-speed="#" ` attribute to element.
-		svgController.initSVG( 'Ground' );
-		svgController.initSVG( 'Big_Building', .3, 1 );
-		svgController.initSVG( 'Small_Building', .8, 3 );
-		svgController.initSVG( 'Side_Building', .4, 2.5 );
-		svgController.initSVG( 'Clock_Tower', .5, 10 );
-		svgController.initSVG( 'Trees', .9 );
-		svgController.initSVG( 'Grass_Hills', null, 5 );
-		
-	})
-
-</script>
+	<script>
+		$(document).ready(function() {
+			svgController.initSVG('Ground');
+			svgController.initSVG('Big_Building', .3, 1);
+			svgController.initSVG('Small_Building', .8, 3);
+			svgController.initSVG('Side_Building', .4, 2.5);
+			svgController.initSVG('Clock_Tower', .5, 10);
+			svgController.initSVG('Trees', .9);
+			svgController.initSVG('Grass_Hills', null, 5);
+		});
+	</script>
 
 </body>
 </html>
